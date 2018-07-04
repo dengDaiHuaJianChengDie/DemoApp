@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseNavigationController.h"
+#import "HomeViewController.h"
+#import "FeatureView.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //设置app的根视图
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[HomeViewController new]];
+    [self.window makeKeyAndVisible];
+    
+    FeatureView *featureView = [[FeatureView alloc]initWithMessage:@"广阔天地，大有作为！" andTimeCount:3];
+    [featureView featureShow];
+    
     return YES;
 }
 

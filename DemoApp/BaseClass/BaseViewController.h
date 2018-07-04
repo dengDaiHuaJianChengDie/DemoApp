@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseViewController.h
 //  DemoApp
 //
 //  Created by 魏佃文 on 2018/7/3.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BaseViewController : UIViewController
 
 @end
-
